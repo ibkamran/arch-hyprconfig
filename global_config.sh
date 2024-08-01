@@ -22,4 +22,4 @@ PACKAGES=("vim" "neovim" "firefox" "fastfetch" "btop" "stow" "tldr" "man")
 ####################
 ### AUR Packages ###
 ####################
-AUR_PACKAGES=("visual-studio-code-bin" "ttf-ms-fonts")
+AUR_PACKAGES=("visual-studio-code-bin" "ttf-ms-fonts" "hyrpland" "hyprpaper")
