@@ -1,25 +1,25 @@
 #!/bin/bash
 
-##########################
-# Global Configuration   #
-##########################
+#############################
+### Global Configuration  ###
+#############################
 
 # This configuration file defines which AUR helpers,
 # code editors, and other tools will be installed.
 # It is sourced by the installation script to determine
 # what to install.
 
-##########################
-# AUR Helpers            #
-##########################
+###################
+### AUR Helpers ###
+###################
 AUR_HELPERS=("paru" "yay")
 
-##########################
-# Code Editors           #
-##########################
-EDITORS=("vim" "neovim" "visual-studio-code-bin")
+#######################
+### Pacman Packages ###
+########################
+PACKAGES=("vim" "neovim" "firefox" "fastfetch" "btop")
 
-##########################
-# Utilities              #
-##########################
-UTILITIES=("git" "firefox" "htop" "neofetch")
+####################
+### AUR Packages ###
+####################
+AUR_PACKAGES=("visual-studio-code-bin")
