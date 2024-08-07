@@ -38,6 +38,6 @@ PACKAGES=(
 ### AUR Packages ###
 ####################
 
-AUR_PACKAGES=("visual-studio-code-bin" "ttf-ms-fonts" t"rofi-lbonn-wayland-git" 
+AUR_PACKAGES=("visual-studio-code-bin" "ttf-ms-fonts" "rofi-lbonn-wayland-git" 
     "wlogout-git" "xdg-desktop-portal-hyprland-git" "deepin-gtk-theme" "plasma6-themes-layan-git" 
     "papirus-folders-catppuccin-git" )
