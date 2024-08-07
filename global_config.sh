@@ -20,7 +20,9 @@ AUR_HELPERS=("paru" "yay")
 PACKAGES=(
     # Utilities
     "firefox" "hyprland" "stow" "wget" "fzf" "mako" "waybar" "pamixer" "pavucontrol" 
-    "gvfs" "file-roller" "sddm" "qt5" "qt6" "hyprpaper"
+    "gvfs" "file-roller" "sddm" "hyprpaper" "fuse"
+    # Theme
+    "kvantum" "papirus-icon-theme" "qt6" "qt6ct"
     # Clipboard
     "grim" "slurp" "cliphist"
     # Bluetooth & Wi-Fi
@@ -29,12 +31,13 @@ PACKAGES=(
     "brightnessctl" "pipewire" "pipewire-pulse" "pipewire-alsa" "pipewire-jack" "wireplumber"
     # Misc
     "bat" "tldr" "man" "fastfetch" "btop" "starship" "telegram-desktop" "zoxide" 
-    "ttf-jet-brains-mono-nerd" "aspell"
+    "ttf-jet-brains-mono-nerd" "aspell" "font-manager"
 )
 
 ####################
 ### AUR Packages ###
 ####################
 
-AUR_PACKAGES=("visual-studio-code-bin" "ttf-ms-fonts" "rofi-lbonn-wayland-git" 
-    "wlogout-git" "xdg-desktop-portal-hyprland-git")
+AUR_PACKAGES=("visual-studio-code-bin" "ttf-ms-fonts" t"rofi-lbonn-wayland-git" 
+    "wlogout-git" "xdg-desktop-portal-hyprland-git" "deepin-gtk-theme" "plasma6-themes-layan-git" 
+    "papirus-folders-catppuccin-git" )
