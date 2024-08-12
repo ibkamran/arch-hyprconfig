@@ -45,7 +45,6 @@ print_green "Services are enabled"
 
 # Install zsh
 ./install_zsh.sh
-cp "$script_dir/zshrc/.zshrc" "$HOME"
 
 echo
 echo
