@@ -20,4 +20,4 @@ elif [ "$1" == "down" ]; then
 fi
 
 # Play the sound
-mpv --no-video ~/.config/hypr/pop.mp3
+mpv --no-video ~/.config/waybar/scripts/pop.mp3
