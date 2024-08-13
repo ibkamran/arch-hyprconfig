@@ -35,7 +35,6 @@ make_exec_and_run "$install_scripts_dir/aur-pkg-install.sh"
 # Install zsh
 echo
 echo "Installing zsh and oh-my-zsh packages..."
-./install_zsh.sh
 make_exec_and_run "$install_scripts_dir/zsh-install.sh"
 
 # Enable Services
