@@ -28,6 +28,8 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
 
 vim.cmd [[
   augroup ColorColumn
@@ -35,3 +37,11 @@ vim.cmd [[
     autocmd BufEnter * if &filetype != 'netrw' && &filetype != '' && &modifiable == 1 | setlocal colorcolumn=80 | else | setlocal colorcolumn=0 | endif
   augroup END
 ]]
+vim.cmd [[
+  augroup CommitMessageSettings
+    autocmd!
+    autocmd FileType gitcommit setlocal colorcolumn=50 spell spelllang=en_us
+  augroup END
+]]
+
+
