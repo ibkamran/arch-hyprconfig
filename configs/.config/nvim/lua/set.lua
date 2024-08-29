@@ -44,4 +44,14 @@ vim.cmd [[
   augroup END
 ]]
 
+vim.cmd [[
+  augroup SpellChecking
+    autocmd!
+    " Enable spell checking for commit messages
+    autocmd BufRead,BufNewFile COMMIT_EDITMSG setlocal spell spelllang=en_us
+    autocmd FileType gitcommit setlocal spell spelllang=en_us
 
+    " Enable spell checking for other specific filetypes (e.g., markdown)
+    autocmd FileType markdown setlocal spell spelllang=en_us
+  augroup END
+]]
