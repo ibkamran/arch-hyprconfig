@@ -95,7 +95,7 @@ make_exec_and_run "$config_scripts_dir/stow.sh"
 
 # Install tmux
 echo
-make_exec_and_run "$config_scripts_dir/tmux-install.sh"
+make_exec_and_run "$install_scripts_dir/tmux-install.sh"
 
 # Install npm packages
 echo
