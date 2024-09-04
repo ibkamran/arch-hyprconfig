@@ -77,6 +77,7 @@ PACKAGES=(
     ### File Manager ###
     ####################
     "dolphin"                         # KDE file manager
+    "thunar"                          # Xfce file manager
 
     #######################
     ### KDE Integration ###
