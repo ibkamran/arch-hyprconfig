@@ -61,6 +61,7 @@ PACKAGES=(
     "ripgrep"                         # Ripgrep is a recursive line-oriented search tool
     "zip"                             # Package and compress (archive) files into a Zip archive
     "unzip"                           # Extract files/directories from Zip archives
+    "less"                            # Utility to read file contents
 
     #######################
     ### Display Manager ###
