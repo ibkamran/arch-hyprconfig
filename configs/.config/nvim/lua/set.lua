@@ -36,18 +36,30 @@ vim.opt.spell = true
 vim.opt.conceallevel = 1 -- obsidian.nvim
 
 vim.api.nvim_create_autocmd("BufEnter", {
-    pattern = "*",
-    callback = function()
-        vim.cmd("highlight Visual guibg=#26403D")
-    end,
+	pattern = "*",
+	callback = function()
+		vim.cmd("highlight Visual guibg=#26403D")
+	end,
 })
-vim.cmd([[
-  augroup ColorColumn
-    autocmd!
-    autocmd BufEnter * if &filetype != 'gitcommit' && &filetype != 'markdown' && &filetype != 'netrw' && &filetype != '' && &modifiable == 1 | setlocal colorcolumn=80 | else | setlocal colorcolumn=0| endif
-  augroup END
-]])
 
+local augroup_colorcolumn = vim.api.nvim_create_augroup("ColorColumn", { clear = true })
+vim.api.nvim_create_autocmd("BufEnter", {
+	group = augroup_colorcolumn,
+	pattern = "*",
+	callback = function()
+		if
+			vim.bo.filetype ~= "gitcommit"
+			and vim.bo.filetype ~= "markdown"
+			and vim.bo.filetype ~= "netrw"
+			and vim.bo.filetype ~= ""
+			and vim.bo.modifiable
+		then
+			vim.opt.colorcolumn = "80"
+		else
+			vim.opt.colorcolumn = "0"
+		end
+	end,
+})
 vim.cmd([[
   augroup CommitSpell
     autocmd!
@@ -64,7 +76,7 @@ vim.cmd([[
 ]])
 
 vim.api.nvim_create_autocmd("DiagnosticChanged", {
-    callback = function()
-        vim.diagnostic.setqflist({ open = false })
-    end,
+	callback = function()
+		vim.diagnostic.setqflist({ open = false })
+	end,
 })
