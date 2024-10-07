@@ -63,20 +63,20 @@ vim.api.nvim_create_autocmd("BufEnter", {
 
 local augroup_commit_spell = vim.api.nvim_create_augroup("CommitSpell", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
-    group = augroup_commit_spell,
-    pattern = { "NeogitCommitMessage", "gitcommit" },
-    callback = function()
-        vim.opt.colorcolumn = "50"
-        vim.opt.spell = true
-    end,
+	group = augroup_commit_spell,
+	pattern = { "NeogitCommitMessage", "gitcommit" },
+	callback = function()
+		vim.opt.colorcolumn = "50"
+		vim.opt.spell = true
+	end,
 })
 
-vim.cmd([[
-  augroup CommentColor
-    autocmd!
-    autocmd BufEnter * highlight Comment guifg=#9f9f9f
-  augroup END
-]])
+vim.api.nvim_create_autocmd("BufEnter", {
+    pattern = "*",
+    callback = function()
+        vim.cmd("highlight Comment guifg=#9f9f9f")
+    end,
+})
 
 vim.api.nvim_create_autocmd("DiagnosticChanged", {
 	callback = function()
