@@ -35,13 +35,12 @@ vim.opt.spelllang = "en_us"
 vim.opt.spell = true
 vim.opt.conceallevel = 1 -- obsidian.nvim
 
-vim.cmd([[
-  augroup ColorVisual
-    autocmd!
-    autocmd BufEnter * highlight Visual guibg=#26403D
-  augroup END
-]])
-
+vim.api.nvim_create_autocmd("BufEnter", {
+    pattern = "*",
+    callback = function()
+        vim.cmd("highlight Visual guibg=#26403D")
+    end,
+})
 vim.cmd([[
   augroup ColorColumn
     autocmd!
@@ -53,7 +52,7 @@ vim.cmd([[
   augroup CommitSpell
     autocmd!
     autocmd Filetype NeogitCommitMessage,gitcommit set colorcolumn=50
-    autocmd Filetype NeogitCommitMessage,gitcommit set spell 
+    autocmd Filetype NeogitCommitMessage,gitcommit set spell
   augroup END
 ]])
 
@@ -64,3 +63,8 @@ vim.cmd([[
   augroup END
 ]])
 
+vim.api.nvim_create_autocmd("DiagnosticChanged", {
+    callback = function()
+        vim.diagnostic.setqflist({ open = false })
+    end,
+})
