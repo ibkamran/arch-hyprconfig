@@ -60,13 +60,16 @@ vim.api.nvim_create_autocmd("BufEnter", {
 		end
 	end,
 })
-vim.cmd([[
-  augroup CommitSpell
-    autocmd!
-    autocmd Filetype NeogitCommitMessage,gitcommit set colorcolumn=50
-    autocmd Filetype NeogitCommitMessage,gitcommit set spell
-  augroup END
-]])
+
+local augroup_commit_spell = vim.api.nvim_create_augroup("CommitSpell", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+    group = augroup_commit_spell,
+    pattern = { "NeogitCommitMessage", "gitcommit" },
+    callback = function()
+        vim.opt.colorcolumn = "50"
+        vim.opt.spell = true
+    end,
+})
 
 vim.cmd([[
   augroup CommentColor
