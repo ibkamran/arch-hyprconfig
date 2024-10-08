@@ -18,7 +18,7 @@ return {
 		},
 		templates = {
 			folder = "~/personal/arch-hyprconfig/configs/.config/md-templates",
-			date_format = "%Y-%m-%d-%a",
+			date_format = "%Y-%m-%d",
 			time_format = "%H:%M",
 		},
 		daily_notes = {
