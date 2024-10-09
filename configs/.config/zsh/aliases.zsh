@@ -6,6 +6,7 @@ alias vim="nvim"                                                              # 
 alias c="code"                                                                # Open VS Code
 alias t="touch"                                                               # Create a new file
 alias cx="clear"                                                              # Clear terminal
+alias de="dolphinenable"
 alias cs="~/.config/auto-commit.sh"                                           # Auto commit script
 alias chwp="~/.config/change-wallpaper.sh"                                    # Script to change wallpaper
 alias addw="~/.config/aspell-add-word.sh"                                     # Script to add words into personal aspell dict
